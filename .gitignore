@@ -1,0 +1,16 @@
+# Entornos virtuales
+venv/
+.venv/
+
+# Cache de Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Resultados generados (no se versionan, se regeneran al correr el programa)
+output/
+saludaudita.db
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db

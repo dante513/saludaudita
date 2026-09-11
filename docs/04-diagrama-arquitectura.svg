@@ -1,0 +1,88 @@
+<svg viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#1F4E78"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="480" fill="#ffffff"/>
+  <text x="450" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#1F4E78">SaludAudita - Flujo del pipeline</text>
+
+  <!-- Entrada -->
+  <rect x="30" y="70" width="150" height="60" rx="8" fill="#D9E6F2" stroke="#1F4E78" stroke-width="1.5"/>
+  <text x="105" y="95" text-anchor="middle" font-size="12" font-weight="bold">facturas_simuladas</text>
+  <text x="105" y="112" text-anchor="middle" font-size="11">.xlsx</text>
+
+  <!-- loaders -->
+  <rect x="230" y="70" width="150" height="60" rx="8" fill="#EAF1F8" stroke="#1F4E78" stroke-width="1.5"/>
+  <text x="305" y="95" text-anchor="middle" font-size="12" font-weight="bold">loaders.py</text>
+  <text x="305" y="112" text-anchor="middle" font-size="11">Excel -&gt; DataFrames</text>
+
+  <line x1="180" y1="100" x2="228" y2="100" stroke="#1F4E78" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 4 validators -->
+  <rect x="430" y="20" width="200" height="45" rx="6" fill="#FFF3CD" stroke="#8a6d1a" stroke-width="1.2"/>
+  <text x="530" y="47" text-anchor="middle" font-size="11">1. soporte_autorizacion.py</text>
+
+  <rect x="430" y="75" width="200" height="45" rx="6" fill="#FFF3CD" stroke="#8a6d1a" stroke-width="1.2"/>
+  <text x="530" y="102" text-anchor="middle" font-size="11">2. codigos_invalidos.py</text>
+
+  <rect x="430" y="130" width="200" height="45" rx="6" fill="#FFF3CD" stroke="#8a6d1a" stroke-width="1.2"/>
+  <text x="530" y="157" text-anchor="middle" font-size="11">3. glosas.py</text>
+
+  <rect x="430" y="185" width="200" height="45" rx="6" fill="#FFF3CD" stroke="#8a6d1a" stroke-width="1.2"/>
+  <text x="530" y="212" text-anchor="middle" font-size="11">4. totales.py</text>
+
+  <text x="670" y="60" font-size="10" fill="#555">validators/</text>
+  <path d="M660,42 L660,205" stroke="#8a6d1a" stroke-width="1" fill="none" stroke-dasharray="3,3"/>
+
+  <line x1="380" y1="100" x2="428" y2="42" stroke="#1F4E78" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <line x1="380" y1="100" x2="428" y2="97" stroke="#1F4E78" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <line x1="380" y1="100" x2="428" y2="152" stroke="#1F4E78" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <line x1="380" y1="100" x2="428" y2="207" stroke="#1F4E78" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+  <!-- report.py -->
+  <rect x="680" y="90" width="180" height="60" rx="8" fill="#EAF1F8" stroke="#1F4E78" stroke-width="1.5"/>
+  <text x="770" y="115" text-anchor="middle" font-size="12" font-weight="bold">report.py</text>
+  <text x="770" y="132" text-anchor="middle" font-size="11">consolida hallazgos</text>
+
+  <line x1="632" y1="42" x2="678" y2="105" stroke="#1F4E78" stroke-width="1" marker-end="url(#arrow)"/>
+  <line x1="632" y1="97" x2="678" y2="113" stroke="#1F4E78" stroke-width="1" marker-end="url(#arrow)"/>
+  <line x1="632" y1="152" x2="678" y2="127" stroke="#1F4E78" stroke-width="1" marker-end="url(#arrow)"/>
+  <line x1="632" y1="207" x2="678" y2="135" stroke="#1F4E78" stroke-width="1" marker-end="url(#arrow)"/>
+
+  <!-- db.py -->
+  <rect x="230" y="230" width="150" height="55" rx="8" fill="#E2F0D9" stroke="#385723" stroke-width="1.5"/>
+  <text x="305" y="253" text-anchor="middle" font-size="12" font-weight="bold">db.py</text>
+  <text x="305" y="270" text-anchor="middle" font-size="11">SQLite (saludaudita.db)</text>
+
+  <line x1="305" y1="130" x2="305" y2="228" stroke="#385723" stroke-width="1.2" stroke-dasharray="4,2" marker-end="url(#arrow)"/>
+  <text x="315" y="195" font-size="10" fill="#385723">persiste facturas,</text>
+  <text x="315" y="208" font-size="10" fill="#385723">cups y hallazgos</text>
+
+  <!-- output -->
+  <rect x="680" y="200" width="180" height="70" rx="8" fill="#D9E6F2" stroke="#1F4E78" stroke-width="1.5"/>
+  <text x="770" y="223" text-anchor="middle" font-size="12" font-weight="bold">output/</text>
+  <text x="770" y="240" text-anchor="middle" font-size="11">reporte_hallazgos.xlsx</text>
+  <text x="770" y="255" text-anchor="middle" font-size="11">reporte_hallazgos.csv</text>
+
+  <line x1="770" y1="150" x2="770" y2="198" stroke="#1F4E78" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- menu / main -->
+  <rect x="30" y="340" width="230" height="65" rx="8" fill="#F2E2F0" stroke="#6a2c66" stroke-width="1.5"/>
+  <text x="145" y="365" text-anchor="middle" font-size="12" font-weight="bold">menu.py</text>
+  <text x="145" y="382" text-anchor="middle" font-size="11">interfaz interactiva por consola</text>
+  <text x="145" y="397" text-anchor="middle" font-size="10">(punto de entrada recomendado)</text>
+
+  <rect x="300" y="340" width="230" height="65" rx="8" fill="#F2E2F0" stroke="#6a2c66" stroke-width="1.5"/>
+  <text x="415" y="365" text-anchor="middle" font-size="12" font-weight="bold">main.py</text>
+  <text x="415" y="382" text-anchor="middle" font-size="11">ejecutar_auditoria()</text>
+  <text x="415" y="397" text-anchor="middle" font-size="10">orquesta todo el pipeline</text>
+
+  <line x1="145" y1="340" x2="380" y2="290" stroke="#6a2c66" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <line x1="415" y1="340" x2="530" y2="230" stroke="#6a2c66" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+  <text x="450" y="450" text-anchor="middle" font-size="11" fill="#555">
+    tests/ (21 pruebas con pytest) valida cada validador + integracion + menu
+  </text>
+</svg>
